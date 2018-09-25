@@ -6,3 +6,9 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
   * [Day 1](/Week_1/Day_1)
   * Day 2
   ### Lecture
+    - fish : green color shown no change in the folder compare to master repository
+    - process.argv: ['node location', 'document location', 'input arguments']
+    - array method: slice
+        animal.slice(2,4); 2 is covered, 4 is not
+    - add git branch: '''console git checkout -b branchname'''
+
