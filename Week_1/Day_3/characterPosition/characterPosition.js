@@ -18,4 +18,3 @@ function countletters(inputString){
 }
 console.log(countletters(input));
 
-
