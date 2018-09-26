@@ -21,3 +21,46 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
     - ```console node``` to test code ```.exit``` to quite
     - check number is integer: 1. ```javascript number.isInteger()``` 2. ```javascript number % 1 === 0```
     - ```javascript Process.exit(0);``` to stop excuting the file
+
+    ###Breakout
+    -Error Type
+        compile type error: cannot run
+        run time error: able to compile but fail at excuting
+    - Scope:
+        function is the same as string, it is primary type, can be passed to other functions
+        ```javascript var add = function(a,b){return a + b};``` if defined after using it will not excute, but if we define a formal function, we can use it before declearing it.
+    - can reture a function inside a function, ie ```javascript a = func();```
+
+
+    ### Tips from Exercise
+    - type coercion: == attemps to force two compared value to be the same type first
+    - everyting in javascript hold a truthy/falsy value, 0 is a falsy value so 0==false ```javascript (0,'',null,undefined,NaN, are all == false)```
+    -
+    * Day3
+    ### Lecture
+    - ```javascript for(var item of array){do something}```
+    - Object
+        - object.key vs object('key') are different when we are not using string literal(key it self as a key in the object 'key'), if key = 'firstname', ```javascript object.key``` is the same as ```javascript object['key']``` will not work.
+        - ALL keys are Sting, even if they are not, javascript will convert them to String
+        - To ADD objects element:  ```javascript object.key = {a:b,B:c};```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
