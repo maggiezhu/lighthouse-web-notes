@@ -59,13 +59,13 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
 
 
     # Day 4: Function & Callback Functions
-        - function can be passed as variable
+    - function can be passed as variable
             ```javascript function main(par1, par2){ par2(par1);} where par2 is the name of a function ``` (not passing par() bc we only want the name, not the result of the function)
-        - Sort: make change on the original array
+    - Sort: make change on the original array
             ```javascript Function: array.sort(function(a,b){return a - b})```: give a a lower index number if the function return <0.
-        - Lexical Scoping:
+     - Lexical Scoping:
                 Nested functions have access to variables declared in their outer scope.
-        - Closure: is the combination of a function and the laical environment within which that function was declared.
+      - Closure: is the combination of a function and the laical environment within which that function was declared.
             ```javascript function makeAdder(x) {
                     return function(y) {
                         return x + y;
@@ -76,9 +76,9 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
                     console.log(add5(2));  // 7
                     console.log(add10(2)); // 12```
 
-        here both add5 are add 10 are closure with different environments, add5 has x = 5 whereas add10 has x = 10.
-        READ: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-        - Immediately-invoked function expression(IIFE)
+    here both add5 are add 10 are closure with different environments, add5 has x = 5 whereas add10 has x = 10.
+    READ: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+     - Immediately-invoked function expression(IIFE)
             var foo = (function(){})()
 
 
