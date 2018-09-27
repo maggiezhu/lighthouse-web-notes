@@ -70,8 +70,9 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
                     var add10 = makeAdder(10);
                     console.log(add5(2));  // 7
                     console.log(add10(2)); // 12```
-            here both add5 are add 10 are closure with different environments, add5 has x = 5 whereas add10 has x = 10.
-            [READ link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
+        here both add5 are add 10 are closure with different environments, add5 has x = 5 whereas add10 has x = 10.
+        READ: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
         - Immediately-invoked function expression(IIFE)
             var foo = (function(){})()
 
