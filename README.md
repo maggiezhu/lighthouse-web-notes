@@ -43,15 +43,17 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
         - object.key vs object('key') are different when we are not using string literal(key it self as a key in the object 'key'), if key = 'firstname', ```javascript object.key``` is the same as ```javascript object['key']``` will not work.
         - ALL keys are Sting, even if they are not, javascript will convert them to String
         - To ADD objects element:  ```javascript object.key = {a:b,B:c};```
-        - Direct put objecgt elements in a Srting:
+        - Template literals: Direct put objecgt elements in a Srting:
             ```javascript console.log('My neme is $(object.lastname) $(object.firstname)'))```
         - Methods:
             - ```javascript Object.keys(myobject);```
         - ```javascript for(var key in object){console.log(key,object[key])};```
+                but we need to make sure the property is acturally the property of the key, not what they inhereted: by doing ```javascript if (planetMoons.hasOwnProperty(planet)) {```
         - Difference btw Object and String:
             1. when pass them to a function and assign new values to them, String and Int are just changing the coye of the value, whereas passing an object and modify will be the original of it.
             http://www.pythontutor.com/javascript.html#mode=edit to test and visulize the code
             2. it only happens when passing the whole obj to function, if we pass a key in side the object, we are still passing that String, therefore outside of it won't change the String
+
 
 
 
