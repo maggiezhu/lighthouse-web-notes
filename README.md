@@ -5,7 +5,8 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
 * [Week 1](/Week_1)
   * [Day 1](/Week_1/Day_1)
   * Day 2
-  ### Lecture
+  # Day 1
+  ## Lecture
     - fish : green color shown no change in the folder compare to master repository
     - process.argv: ['node location', 'document location', 'input arguments']
     - array method: slice
@@ -22,7 +23,7 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
     - check number is integer: 1. ```javascript number.isInteger()``` 2. ```javascript number % 1 === 0```
     - ```javascript Process.exit(0);``` to stop excuting the file
 
-    ###Breakout
+    ##Breakout
     -Error Type
         compile type error: cannot run
         run time error: able to compile but fail at excuting
@@ -35,8 +36,10 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
     ### Tips from Exercise
     - type coercion: == attemps to force two compared value to be the same type first
     - everyting in javascript hold a truthy/falsy value, 0 is a falsy value so 0==false ```javascript (0,'',null,undefined,NaN, are all == false)```
-    -
-    * Day3
+
+
+
+    # Day3
     ### Lecture
     - ```javascript for(var item of array){do something}```
     - Object
@@ -53,7 +56,9 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
             1. when pass them to a function and assign new values to them, String and Int are just changing the coye of the value, whereas passing an object and modify will be the original of it.
             http://www.pythontutor.com/javascript.html#mode=edit to test and visulize the code
             2. it only happens when passing the whole obj to function, if we pass a key in side the object, we are still passing that String, therefore outside of it won't change the String
-    * Day 4: Function & Callback Functions
+
+
+    # Day 4: Function & Callback Functions
         - function can be passed as variable
             ```javascript function main(par1, par2){ par2(par1);} where par2 is the name of a function ``` (not passing par() bc we only want the name, not the result of the function)
         - Sort: make change on the original array
