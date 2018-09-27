@@ -5,9 +5,9 @@ var students = [
   { id: 4, name: "alex",     age: 30 }
 ];
 
-function customSort(obj1,obj2,entireAry){
-  //var compareName = compare(obj1.name,obj2.name);
-
+function customSort(obj1,obj2){
+// bc sort takes a compare function with only two arguments
+ //why can't use sort in here to sort the entire array first
   if(obj1.name === obj2.name){
     return obj1.age - obj2.age;
   }else {
