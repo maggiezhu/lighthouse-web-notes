@@ -44,7 +44,7 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
         - ALL keys are Sting, even if they are not, javascript will convert them to String
         - To ADD objects element:  ```javascript object.key = {a:b,B:c};```
         - Template literals: Direct put objecgt elements in a Srting:
-            ```javascript console.log('My neme is $(object.lastname) $(object.firstname)'))```
+            ```javascript console.log(`My neme is ${object.lastname} ${object.firstname}`))``` BACKQUOTATION NOT QUOTATION!
         - Methods:
             - ```javascript Object.keys(myobject);```
         - ```javascript for(var key in object){console.log(key,object[key])};```
@@ -53,6 +53,29 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
             1. when pass them to a function and assign new values to them, String and Int are just changing the coye of the value, whereas passing an object and modify will be the original of it.
             http://www.pythontutor.com/javascript.html#mode=edit to test and visulize the code
             2. it only happens when passing the whole obj to function, if we pass a key in side the object, we are still passing that String, therefore outside of it won't change the String
+    * Day 4: Function & Callback Functions
+        - function can be passed as variable
+            ```javascript function main(par1, par2){ par2(par1);} where par2 is the name of a function ``` (not passing par() bc we only want the name, not the result of the function)
+        - Sort: make change on the original array
+            ```javascript Function: array.sort(function(a,b){return a - b})```: give a a lower index number if the function return <0.
+        - Lexical Scoping:
+                Nested functions have access to variables declared in their outer scope.
+        - Closure: is the combination of a function and the laical environment within which that function was declared.
+            ```javascript function makeAdder(x) {
+                    return function(y) {
+                        return x + y;
+                      };
+                    }
+                    var add5 = makeAdder(5);
+                    var add10 = makeAdder(10);
+                    console.log(add5(2));  // 7
+                    console.log(add10(2)); // 12```
+            here both add5 are add 10 are closure with different environments, add5 has x = 5 whereas add10 has x = 10.
+            [READ:](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+        - Immediately-invoked function expression(IIFE)
+            var foo = (function(){})()
+
+
 
 
 
