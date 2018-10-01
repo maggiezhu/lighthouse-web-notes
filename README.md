@@ -59,6 +59,7 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
 
 
     # Day 4: Function & Callback Functions
+    - Callback function is the function being passed to another function as argument or as return.(the nested function is not callback function)
     - function can be passed as variable
             ```javascript function main(par1, par2){ par2(par1);} where par2 is the name of a function ``` (not passing par() bc we only want the name, not the result of the function)
     - Sort: make change on the original array
@@ -81,9 +82,37 @@ This repository contains all of the notes taken by [Maggie](https://github.com/m
      - Immediately-invoked function expression(IIFE)
             var foo = (function(){})()
 
+# Day 5
+    - module.export{
+        object that links name(as key) and function
+        } makes data in one file visible to another file
+    - require() to get data from the other file
+    - npm init -y : to make a file javascript project!
+        then we should create a .json to keep track of what package we need to run a file.
+    - One module.exports per file, so we can export a library to be able to access one single function (a = require.afunction)
+    - PUT npm install moment --save! to put required packages in package.jjson, this file contains the whole package list required to run your code.
+    - Write tast case! 'mocha'and 'chai' are both testing packages that we can inport.
 
 
+    - '../afile' is at one level higher]
 
+
+** read stretch reading in second module of today! Day 5
+
+    - Module.export: var receiver = require('filename'); file here contains the below module.exports lines
+        // good
+        module.exports = {
+          add(a,b) { return a+b }
+        }
+
+        // good
+        module.exports.subtract = (a,b) => a-b
+    -  Module: JS code in a seperate file, that can be required by other JS programs
+        Library: an independent collection of code that can be used by programs (not JS specific)
+        Package: a collection of JS modules, with a package.json, usually published on NPM
+    - Should node_modules be included for commit? (it is where npm stores dependencies)
+    No package.json should be committed because it contains the information necessary to recreate node_modules. Including node_modules would be redundant and would cause giant git commits every time a library is updated.
+    - String function: str.replace('/the string you wanna replace/g','')
 
 
 

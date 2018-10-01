@@ -1,0 +1,22 @@
+{
+  "name": "trychalk",
+  "version": "1.0.0",
+  "description": "this is the first npm exercise",
+  "main": "chalkentry",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maggiezhu/lighthouse-web-notes/tree/master/Week_1"
+  },
+  "keywords": [
+    "try",
+    "first"
+  ],
+  "author": "Maggie",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  }
+}
