@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<%include ./partials/_header.ejs%>
+
+<html lang = 'en'>
+<head>
+  <title>TinyApp</title>
+</head>
+<body>
+  <ul>
+    <% for(var link in urls){%>
+    <li><%=urls[link]%></li>
+    <a href="#">Change URL</a>
+    <%}%>
+
+  </ul>
+</body>
+</html>
