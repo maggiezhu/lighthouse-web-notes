@@ -20,13 +20,11 @@ app.set("view engine", "ejs");
 
 app.get('/urls',(request,response)=>{
   let templateVars = {urls:urlDatabase}
-  console.log(request.headers);
-  console.log('in get /urls', request.cookies==={});
-  // if(request.cookies.username){
-  //   console.log('in get /urls, username exist');
-  //   templateVars.username =request.cookies.username}
-  //   console.log('in get /urls, username NOT exist');
-  // response.render("urls_index", templateVars);
+  if(request.cookies.username){
+    console.log('in get /urls, username exist');
+    templateVars.username =request.cookies.username}
+    console.log('in get /urls, username NOT exist');
+  response.render("urls_index", templateVars);
 });
 
 app.get('/urls/new',(request,response)=>{
@@ -38,6 +36,11 @@ app.get('/urls/new',(request,response)=>{
 app.post('/login',(request,response)=>{
   let username = request.body.username;
   response.cookie('username', username);
+  response.redirect('/urls');
+})
+// handle POST request from /logout
+app.post('/logout',(request, response)=>{
+  response.clearCookie('username');
   response.redirect('/urls');
 })
 

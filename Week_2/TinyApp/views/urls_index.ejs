@@ -9,7 +9,6 @@
   <ul>
     <% for(var link in urls){%>
         <li><%=urls[link]%></li>
-        <%console.log('in indexejs file')%>
 
         <form method="POST" action="/urls/<%=link%>/delete">
           <button placeholder="http://">Delete this shorturl</button>
