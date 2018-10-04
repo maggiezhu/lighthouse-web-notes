@@ -8,10 +8,20 @@
 <body>
   <ul>
     <% for(var link in urls){%>
-    <li><%=urls[link]%></li>
-    <a href="#">Change URL</a>
-    <%}%>
+        <li><%=urls[link]%></li>
 
+        <form method="POST" action="/urls/<%=link%>/delete">
+          <button placeholder="http://">Delete this shorturl</button>
+        </form>
+
+        <form method = 'GET' action = '/urls/<%=link%>'>
+          <button>Edit</button>
+        </form>
+
+        <%}%>
   </ul>
+  <!--Form element for deleting shorturl -->
+
+
 </body>
 </html>

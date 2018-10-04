@@ -23,20 +23,32 @@ app.get('/urls/new',(request,response)=>{
   response.render('urls_new');
 });
 
-app.post('/urls',(request, response)=>{
-  console.log(request.body);//this is the longurl
-  let shorturl = generateRandomString();
 
+app.post('/urls/:id/delete', (request,response)=>{
+  delete urlDatabase[request.params.id];
+  response.redirect('/urls');
+})
+
+//Edit a longurl
+app.post('/urls/:id',(request,response)=>{
+    console.log('in the psot server for urls/:id')
+    urlDatabase[request.params.id]= request.body.newlongURL;
+    response.redirect('/urls');
+
+})
+
+app.post('/urls',(request, response)=>{
+  let shorturl = generateRandomString();
   urlDatabase[shorturl] = request.body.longURL;
   response.redirect(`http://localhost:8080/urls/${shorturl}`);
-  console.log(urlDatabase);
-
 });
 
+
 app.get('/urls/:id',(request, response)=>{
-  let templateVars = { shortURL: request.params.id };
+  let templateVars = { shorturl: request.params.id,
+  longurl : urlDatabase[request.params.id]};
   response.render('urls_show',templateVars); //send input url to template
-  console.log(request.params.id);
+  console.log(templateVars);
 });
 
 app.get("/u/:shortURL", (request, response) => {
@@ -45,6 +57,14 @@ app.get("/u/:shortURL", (request, response) => {
   let longurl = urlDatabase[shorturl];
   response.redirect(longurl);
 });
+
+//Delete shorturl
+app.post('/urls/:id/delete', (request,response)=>{
+  delete urlDatabase[request.params.id];
+  response.redirect('/urls');
+})
+
+
 
 
 app.listen(PORT);

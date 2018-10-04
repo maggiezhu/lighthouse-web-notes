@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Single URL Page</title>
+</head>
+<body>
+  <form action="/urls/<%=shorturl%>" method="POST">
+    <h1>ShortURL:<%=shorturl%></h1>
+    <input  id = 'newlongURL' type = 'text' name ='newlongURL' placeholder=<%=longurl%> style="width: 300px">
+    <input type="submit" value="Submit">
+
+  </form>
+</body>
+</html>
