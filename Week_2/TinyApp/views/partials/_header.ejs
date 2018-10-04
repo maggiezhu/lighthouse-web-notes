@@ -4,6 +4,23 @@
   <title></title>
 </head>
 <body>
-<header>This is a header in _header.ejs</header>
+ <!--username in cookie, loggedin  -->
+<!--   <%if(username){%>
+    <form method="POST" action = "/login">
+      <label><%=username%></label>
+      <input type = 'text' name ='username' placeholder='Username'>
+      <input type="submit" value="Submit">
+    </form>
+  <% } %> -->
+  <!--no username in cookie, not loggedin  -->
+  <!-- <% else{ %> -->
+    <form method="POST" action = "/login">
+      <label>Login:</label>
+      <input type = 'text' name ='username' placeholder='Username'>
+      <input type="submit" value="Submit">
+    </form>
+<!--   <% } %> -->
+
+
 </body>
 </html>
