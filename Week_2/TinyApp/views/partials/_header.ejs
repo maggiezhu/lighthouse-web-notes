@@ -4,22 +4,22 @@
   <title></title>
 </head>
 <body>
+
 <!--username exist + logout button-->
-<%if(username){%>
+<%if(user_id !== undefined){%>
   <form method="POST" action = "/logout">
-    <label><%=username%></label>
+    <label><%=user_id%></label>
     <input type="submit" value="Logout">
   </form>
 
   <% }else{%>
-  <!--username not exist-->
-    <form method="POST" action = "/login">
-    <label>Please Login</label>
-    <input type = 'text' name ='username' placeholder='Username'>
-    <input type="submit" value="Submit">
+  <!--user not exist WHAT TO DO, redirect to login page?-->
+      <a href="/register">Register</a>
+      <a href="/login">Login</a>
+<!--     <form method="GET" action = "/login">
+    <input type="submit" value="Login"> -->
   </form>
   <%}%>
-
 
 </body>
 </html>
