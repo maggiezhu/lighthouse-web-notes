@@ -7,14 +7,21 @@
 </head>
 <body>
   <ul>
-    <% for(var link in urls){%>
-        <li><%=urls[link]%></li>
-
-        <form method="POST" action="/urls/<%=link%>/delete">
+    <!--currentUserUrls is an array of urls object longurl = currentUserUrls.longurl-->
+    <!--link here is the short url -->
+        <%console.log('in index hi');%>
+        <%var i = 0%>
+    <% for(var url in currentUserUrls){%>
+        <%console.log('this shorturl',Object.keys(currentUserUrls)[i]);%>
+        <%var shorturl = Object.keys(currentUserUrls)[i]%>
+        <%i++;%>
+        <li><%=currentUserUrls[url].longurl%></li>
+        <%console.log(currentUserUrls[url].longurl);%>
+        <form method="POST" action="/urls/<%=shorturl%>/delete">
           <button placeholder="http://">Delete this shorturl</button>
         </form>
 
-        <form method = 'GET' action = '/urls/<%=link%>'>
+        <form method = 'GET' action = '/urls/<%=shorturl%>'>
           <button>Edit</button>
         </form>
 

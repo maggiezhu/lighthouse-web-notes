@@ -12,6 +12,12 @@
     <input type="submit" value="Logout">
   </form>
 
+  <!--add a link to add new url page-->
+    <form method="GET" action = "/urls/new">
+    <label>Add new url</label>
+    <input type="submit" value="Add">
+  </form>
+
   <% }else{%>
   <!--user not exist WHAT TO DO, redirect to login page?-->
       <a href="/register">Register</a>
